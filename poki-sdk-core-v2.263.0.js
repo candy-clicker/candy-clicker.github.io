@@ -3636,7 +3636,7 @@
 				return Me(this, (function(r) {
 					switch (r.label) {
 						case 0:
-							return r.trys.push([0, 3, , 4]), [4, fetch("null.json?https://geo.poki.io/", {
+							return r.trys.push([0, 3, , 4]), [4, fetch("geo.json?https://geo.poki.io/", {
 								method: "GET",
 								headers: {
 									"Content-Type": "text/plain"
@@ -3788,9 +3788,7 @@
 						case 3:
 							return i = s.sent(), n = i.blocklist, r = i.country_exclusion, o = i.bidder_limitation, [2, {
 								blocklist: (null == n ? void 0 : n.split(/[\r\n]+/)) || [],
-								countryExclusion: (r.split(",") || []).map((function(e) {
-									return e.toUpperCase()
-								})),
+								countryExclusion: [],
 								bidderLimitation: JSON.parse(o || "{}")
 							}];
 						case 4:
